@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="description" content="Baidya's website" />
+<meta name="keywords" content="Baidya Nath, Saha, Wake Forest, University of Alberta, computer vision, image processing, Machine Learning, Pattern Recognition" />
+<title>Baidya Nath Saha</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-control" content="public"/>
+<link rel="stylesheet" type="text/css" href="styles/styleNew.css" />
+</head>
+<body>
+
+      <div id="wrapper">
+	   <div id="header">
+                <div id="header_left">
+                      <h1><a href="#">Baidya Nath Saha</a></h1>
+                </div>
+                <div id="header_right">
+		      <h2>"A teacher can never truly teach unless he is still learning himself. A lamp can never light another lamp unless it continues to burn its own flame .  
+                " - Rabindranath Tagore (Nobel Laureate)</h2>
+                </div>
+	   </div>
+           <div id="menu">
+                <div id="nav"> 
+		     <ul>
+			<li class="first"><a href="home.html">Home</a></li>
+			 <li><a href="research.html">Research</a></li>
+			 <li><a href="publication.html">Publication</a></li>
+			 <li><a href="resume.html">Resume</a></li>
+			 <!---<li><a href="#about">About</a></li>>--->
+			 <li class="last"><a href="contact.html">Contact</a></li>
+
+		     </ul>
+		     <br class="clearfix" />
+	        </div>
+           </div>
+      </div>
+      <div id="page">
+      <div id="content_research"> 
+                  <div class="box">    
+                       <a class="scroller" name="research"></a><h2>Research</h2>
+                       <p class="researchContent">
+                       My research interest is in Image Processing and Computer Vision. Specifically, my intention is to excavate computationally viable solutions 
+					   to large scale (complex) and completely automated image analysis and vision applications that require any of these techniques: 
+					   image segmentation/classification and object detection/tracking using machine learning. In the following, I select three topics which are thoroughly
+                       investigated in my research.
+                       </p>          
+                       <h4>Hierarchical Level Set With AR-Boost: An Automated Multilevel Image Segmentation and Its Application to White Matter Lesion segmentation</h4>
+                           <!--<div class="image">      
+                           <img class="proposed Method" src="images/propMethod.png" width="570" height="290" align = "center" alt="Proposed Method - White Matter Lesion Segmentation"/>
+                           <br class="clearfix" />
+                           <div align = "center"> <b> Figure 1: </b> Proposed Methodology for White Matter Lesion Segmentation </div>
+						   
+                           </div> -->
+						   
+						   <!--<head>
+                           <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+                           </head>
+                           <body>
+                            Here are my formulas
+                           <div lang="latex">1+sin(x)^2+3</div>
+                           <ul>
+                           <li lang="latex">x^2+y^2+z^2</li>
+                           <li lang="latex">a^2+b^2</li>
+                           </ul> -->
+						   <p class="researchContent">
+                                <b>Abstract:</b> Hierarchical as well as coupled level sets are widely used for multilevel image segmentation. However, these
+                           tools are successful if the number of levels of an image are known and a careful choice of initialization is performed.                     
+						   We intend a novel hierarchical level set (HLS) followed by an Adaptive Regularized Boosting (AR-Boost) for automatic White Matter Lesion 
+						   (WML) segmentation from Magnetic Resonance Images (MRI). HLS does not need to know the number of levels in an image and HLS is computationally 
+						   less expensive and more initialization independent than coupled level-sets since HLS doesn’t generate redundant regions. We employ
+                           an energy functional that minimizes the negative logarithm of variances between the two partitions created by the level set function. HLS 
+						   uses a level set to partition the image into a number of segments, then applies the level set on all the segments separately to create more 
+						   segments and the process continues iteratively until all the segments become a nearly homogeneous region (low intensity variance). Then AR-Boost is 
+						   applied which classifies the segments into WML and non-WML classes. The proposed loss function for AR-boost enforces more weight on misclassified samples at each 
+						   iteration than Adaboost to classify correctly in the next iteration and consequently leads to early convergence. Unlike Adaboost, the user can select
+                           optimal weights through cross-validation. Experimental results demonstrate that the proposed method outperforms state-of-the-art automated white matter 
+						   lesion segmentation techniques.
+                           </p>
+						   <figure align = "center">
+                           <img class="proposed Method" src="images/propMethod.png" width="700" height="400" alt="Proposed Method - White Matter Lesion Segmentation"/>						   
+                           <figcaption><b> Figure 1: </b> Proposed Methodology for White Matter Lesion Segmentation </figcaption>
+						   </figure>
+						   <p class="researchContent">
+                                <b>Proposed Method:</b> The proposed methodology is depicted in Figure 1. The input of the algorithm is three-dimensional structural T1 and Flair sequences of the patient's MRI and the output is the white matter 
+					       lesions found on Flair sequences. We first preprocess the data where we generate white matter (WM) mask from T1 images. Then we register WM mask with skull stripped and bias corrected Flair images and retain only the region from the Flair images that lie inside WM mask.Subsequently we apply HLS which returns a set of regions 
+						   including both lesions (desired object) and non-lesions. Then AR-Boost classifies the regions into lesions and non-lesions. 
+                           </p>
+                           <figure> 						   
+						   <img class="proposed Method" src="images/synthetic.png" width="700" height="250" alt="Proposed Hierarchical Level Sets (HLS)"/>						   
+                           <figcaption align = "center"><b> Figure 2: </b> Results of coupled and hierarchical level sets on synthetic image </figcaption>
+						   </figure>
+						   <p class="researchContent">
+                                <b>Hierarchical Level Set Method:</b> Typically level set creates 2 partitions. For more partitions, coupled level sets are used. n-level set creates 2<sup> n</sup> number of partitions. However, the success
+						    of level set depends on its initialization. Hierarchical level sets implement level set in a hierarchical fashion. In HLS, we apply level set that creates 2 partitions. Then we compute the ratio of "between variance" 
+                            and "total variance" of 2 partitions and if the ratio is greater than the threshold, then we apply level set in each of the region separately and create 2 partitions on each region. This procedure continues until the 							
+                           the ratio of "between variance"  and "total variance" of 2 candidate partitions is below a threshold value. Figure 2 shows the results of level set, 2-coupled level sets and hierarchical level sets. Figure 3 depicts the
+						   hierarchical level set algorithm. Figure 3 shows the HLS and Figure 4 shows the results of HLS on a synthetic image. 
+						   </p>
+						   <figure>
+						   <img class="proposed Method" src="images/HLS.png" width="700" height="500" alt="Proposed Method - White Matter Lesion Segmentation"/>
+                           <figcaption align = "center"><b> Figure 3: </b> Hierarchical Level Sets (HLS)</figcaption>
+						   </figure>
+						   <figure>
+						   <img class="proposed Method" src="images/HLSsynthetic.png" width="700" height="400" alt="Hierarchical Level Sets (HLS) on synthetic image"/>
+                           <figcaption align = "center"><b> Figure 4: </b> Hierarchical Level Sets (HLS) on synthetic image </figcaption>
+						   </figure>
+						   <p class="researchContent">
+                                <b>Adaptive Regularized Boosting:</b> Adaptive Regularized Boosting incorporates a regularization term in the exponential loss function for boosting that awards less penalty than than Adaboost for negative margin as
+						   shown in Figure 5. Proposed AR-Boost loss function is same as exponential loss function when the weak classifier at current stage classifies accurately. Otherwise, AR-Boost enforces more weights to the misclassified samples
+                           than Adaboost so that the weak classifier of the next stage provides more importance while classifying them. We minimize the proposed regularized loss function and derive a slighty different boosting algorithm than adaboost 
+                           that are illustrated in Figure 6. Figure 7 shows that the upper bound of training and generalization error of AR-Boost is less than or equal to Adaboost. Figure 8 displays the convergence of different boosting algorithm. Figure 8 shows that proposed AR-Boost obeys more montonoic decreasing of training and test error with boosting iterations.						   
+						   </p>
+						   <figure>
+						   <img class="proposed Method" src="images/ARboost.png" width="700" height="500" alt="Boosting exponential Loss functions"/>
+                           <figcaption align = "center"><b> Figure 5: </b> Loss Function for Adaptive Regularized Boosting </figcaption>
+						   </figure>
+						   <figure>
+						   <img class="proposed Method" src="images/AR_boost.png" width="700" height="500" alt="Adaptive Regularized Boosting"/>
+                           <figcaption align = "center"><b> Figure 6: </b> Adaptive Regularized Boosting </figcaption>
+						   </figure>
+						   <figure>
+						   <img class="proposed Method" src="images/stat_arboost.png" width="700" height="500" alt="Statistical properties of AR-Boost"/>
+                           <figcaption align = "center"><b> Figure 7: </b> Statistical properties of Adaptive Regularized Boosting </figcaption>
+						   </figure>
+                           <figure>
+						   <img class="proposed Method" src="images/boost_convergence.png" width="700" height="500" alt="Convergence of different boosting algorithms"/>
+                           <figcaption align = "center"><b> Figure 8: </b> Convergence of different Boosting Algorithms</figcaption>
+						   </figure>
+                           
+						   <p class="researchContent">
+                               <b>Experimental Results:</b> Images used in this study were collected from ongoing studies investigating white matter changes in diabetes at <a onclick="target='_blank'" href="http://fmri.wfubmc.edu/research/DHSMind">Wake Forest </a>. We obtained a sample of 50 
+							   randomly selected control subjects, and 50 diabetic patients. All brain images were acquired on the same 1.5 T GE scanner with twinspeed radients using 
+							   a neurovascular head coil. We used a 3D structural T1-weighted sequence, and a 3D structural FLAIR sequence. Results showed that Proposed methodology performs better than state-of-the art techniques. For more informations, please read our paper:
+							   <li>B. N. Saha, S. Natarajan, G. Kota, C. T. Whitlow, D. Bowden, J. Divers, B. I. Freedman and J. A. Maldjian,
+                                       <b>A Novel Hierarchical Level Set with AR-Boost for White Matter Lesion Segmentation in Diabetes.</b>
+                                       <i>ICMLA'12: 11<sup>th</sup> IEEE International Conference on Machine Learning and Applications</i>, Boca Raton, Florida, 2012. 
+                               </li>
+						   </p>
+						   <h4>The Evolution of Snake Toward Automation for Multiple Blob-Object Detection</h4>
+						   <p class="researchContent">
+                                <b>Abstract:</b> For the last two decades “active contour” or “snake” has been effective as an interactive image segmentation tool in a wide range of applications, especially for blob-object delineation. In the interactive snake segmentation process, a user draws 
+								a rough object outline; next, a cost function is optimized to drive the user-drawn contour a.k.a. snake to delineate the desired object boundary. Although successful as an interactive segmentation tool, snake exhibits poor performances in various noteworthy image 
+								segmentation applications that require complete automation. Examples include oil sand particle delineation, biological cell segmentation and so on. This research presents a novel, completely automated snake/active contour algorithm for multiple blob-object delineation. 
+								The algorithm consists of three sequential steps: <b> (a) snake initialization: </b> where we apply a Probabilistic Quad Tree (PQT) based approximate segmentation technique on an image to find the regions of interest (ROI) where the probability of having objects is very high 
+								and place seeds uniformly within the ROIs; <b> (b) snake evolution: </b> where we evolve one novel Interleave Directional Gradient Vector Flow (IDGVF) snake from each seed; <b>(c) snake validation:</b> where we classify the snakes into object and non-object classes using a novel 
+								adaptive regularized boosting (ARboost). Existing efforts towards snake automation have concentrated only on the succession of initialization and evolution steps and have practically overlooked the snake validation step. Here, we emphasize that we cannot skip the 
+								validation step, even though the initialization and evolution have performed well. Our proposed novel validation step, executed after complete convergence of a snake contour from a given initialization, classifies the evolved contour into desired object and non-object 
+								classes. ARboost employs a novel loss function for boosting that enables to classify snakes more accurately into object and non-object classes than other variants of boosting. PQT generates substantially fewer seed points and is therefore more efficient than other 
+								initialization methods without degrading the segmentation performance. We have demonstrated that IDGVF is more robust to initialization and it possesses a broader capture range than other variants of GVF snakes. The proposed automated snake algorithm has been 
+								successfully applied to two real data sets: oil sand ore images that have relevance in the oil sand mining industry and leukocyte images that are significant in biomedical engineering.
+                           </p>
+						   <figure>
+						   <img class="proposed Method" src="images/snake_automation.png" width="700" height="500" alt="Snake Automation"/>
+                           <figcaption align = "center"><b> Figure 9: </b> Snake Automation </figcaption>
+						   </figure>
+						   <p class="researchContent">
+                                <b>Proposed Method:</b> Figure 9 shows that our method for snake automation consists of three steps: Snake initialization, snake evolution and snake validation. We propose a minimally interactive snake (one click snake) as shown in Figure 10 where snake can develop from a very small circle (~3 pixel radius).
+                                We introduce three additional modifications of gradient vector flow (GVF) snake to make it minimally interactive: (a) We adopt dirichlet boundary condition into snake energy functional; (b) We compute gradient vector field in an iterleave fashion: We compute gradient field and develop
+                                snake until convergence, then modify the gradient field and develop snake from the converged position of previous stage and continue this procedure until ther is no significant change found in the area delineated by the snake in the current iteration with that of previous iteration and (c) 
+								We introduce a directional term in the snake energy functional that pulls the snake towards the object edges.We call this minimally interactive snake as "Interleave Directional Gradient Vector Flow Snake" (IDGVF) and the algorithm of IDGVF is depicted in Figure 11.  Proposed modification helps in snake covergence on actual object edges as shown in Figure 12.
+                           </p>
+						   
+						   
+						   <figure>
+						   <img class="proposed Method" src="images/one_click_snake.png" width="700" height="500" alt="Minimally interactive snake"/>
+                           <figcaption align = "center"><b> Figure 10: </b> Minimally interactive snake </figcaption>
+						   </figure>
+						   <figure>
+						   <img class="proposed Method" src="images/idgvf.png" width="700" height="500" alt="IDGVF snake"/>
+						   <figcaption align = "center"><b> Figure 11: </b> Interleave Directional Gradient Vector Flow(IDGVF) snake </figcaption>
+						   </figure>
+						   <figure>
+						   <img class="proposed Method" src="images/dirichlet_bc.gif" width="225" height="250" alt="Adaptive Regularized Boosting"/>
+                           <img class="proposed Method" src="images/dirichlet_bc_em.gif" width="225" height="250" alt="Adaptive Regularized Boosting"/>
+						   <img class="proposed Method" src="images/dirichlet_bc_vf.gif" width="225" height="250" alt="Adaptive Regularized Boosting"/>
+						   <img class="proposed Method" src="images/idgvf.gif" width="225" height="250" alt="Adaptive Regularized Boosting"/>
+						   <img class="proposed Method" src="images/idgvf_em.gif" width="225" height="250" alt="Adaptive Regularized Boosting"/>
+						   <img class="proposed Method" src="images/idgvf_vf.gif" width="225" height="250" alt="Adaptive Regularized Boosting"/>
+						   <figcaption align = "center"><b> Figure 12: </b> Snake Evolution : (Top row): Enhanced Generalized Gradient Vector Flow. (Bottom row): Proposed minimially interactive snake. (Left column): oil sand particle image; (Middle column): Edge map; (Right column): Gradient vector field.</figcaption>
+						   </figure>
+						   <figure>
+						   <img class="proposed Method" src="images/snake_valid_pca.png" width="700" height="500" alt="Snake Validation"/>
+                           <figcaption align = "center"><b> Figure 13: </b> Snake validation by Principal Component Analysis (PCA)</figcaption>
+						   </figure>
+						   <p class="researchContent">
+                                <b>Snake Validation by PCA:</b> When we evolve snakes from initial seed points, we construct a "pattern image" by taking an annular band acorss each object edge and then warped into a rectangular image for computational convenience. Pattern image carries intensity transitions across object edges which
+                            discriminate desired objects from clutter. We use pattern image for PCA classification. Pattern image associated with low PCA reconstruction error belong to desired object class as shown in Figure 13.	For further details, please read our papers:
+							   <li>B. N. Saha, N. Ray, and H. Zhang,
+                                       <b> Snake validation: A PCA-based outlier detection method.</b>
+                                       <i>IEEE Signal Processing Letters</i>, vol. 16, issue 6, pp. 549-552, 2009.
+                               </li>	
+                               <li>B. N. Saha, N. Ray, and H. Zhang,
+                                       <b>Automating Snakes for Multiple Objects Detection.</b>
+                                       <i>ACCV'10: 10<sup>th</sup> Asian Conference on Computer Vision</i>, Queenstown, New Zealand, 2010.
+                               </li>							   
+                           </p>
+						   <h4>Quick detection of brain tumors and edemas: A bounding box method using left-right brain symmetry</h4>
+						   <p class="researchContent">
+                                <b>Abstract:</b>A significant medical informatics task is indexing patient databases according to size, location, and other characteristics of brain tumors and edemas, possibly based on magnetic resonance (MR) imagery. This requires segmenting tumors and edemas within images from different MR modalities. To date, automated 
+						   brain tumor or edema segmentation from MR modalities remains a challenging, computationally intensive task. In this paper, we propose a novel automated, fast, and approximate segmentation technique. The input is a patient study consisting of a set of MR slices, and its output is a subset of the slices that 
+						   include axis-parallel boxes that circumscribe the tumors. Our approach is based on an unsupervised change detection method that searches for the most dissimilar region (axis-parallel bounding boxes) between the left and the right halves of a brain in an axial view MR slice. This change detection process uses 
+						   a novel score function based on Bhattacharya coefficient computed with gray level intensity histograms. We prove that this score function admits a very fast (linear in image height and width) search to locate the bounding box. 
+						   </p>
+						   <figure>
+						   <img class="proposed Method" src="images/FBB.png" width="700" height="500" alt="Fast Bounding Box"/>
+                           <figcaption align = "center"><b> Figure 14: </b> Fast Bounding Box (FBB) </figcaption>
+						   </figure>
+						   <p class="researchContent">
+                                <b>Proposed Method:</b>We propose two sequential line search; one vertical and one horizontal and computes a score function based on Bhattacharya Coefficient (BC) at each line position  as shown in Figure 14. The minimum and maximum value of the score function gives the end position of the anomaly as shown in Figure 14 and Figure 15.
+							Accurate segmentation methods fail to segment brain tumor boundary successfully. However, these accurate segmentation methods such as Chan-Vese and Normalized graph cut method can successfully delineate tumor boundary if they are applied within the bounding box automatically found from the proposed "Fast Bounding Box" (FBB) as shown in
+                            Figure 16.							
+						   </p>
+						   <figure>
+						   <img class="proposed Method" src="images/FBB_1.png" width="700" height="500" alt="FBB for Brain Tumor"/>
+						   <figcaption align = "center"><b> Figure 15: </b> Fast Bounding Box (FBB) for brain tumor detection.</figcaption>
+						   </figure>
+						   <figure>
+						   <img class="proposed Method" src="images/accurate_tumor.png" width="700" height="500" alt="Accurate Tumor"/>
+						   <figcaption align = "center"><b> Figure 16: </b> Accurate Segmentation of Brain Tumor.</figcaption>
+						   </figure>
+						   For more details, please read our paper:
+							   <li>B. N. Saha, N. Ray, R. Greiner, A. Murtha and H. Zhang,
+                                       <b>Quick detection of brain tumors and edemas: A bounding box method using symmetry.</b>
+                                       <i>Computerized Medical Imaging and Graphics</i>, vol. 36,  issue 2, pp. 95-107, 2012. 
+                               </li>
+                </div>
+           </div>
+
+</body>
+</html>

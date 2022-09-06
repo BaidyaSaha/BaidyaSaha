@@ -1,0 +1,646 @@
+/*
+Author: Baidya Nath Saha
+
+This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+*/
+/************************** Body *********************************/
+body
+{
+   margin: 0;
+   padding: 0;
+   line-height: 1.6em;
+   font-size: 12px;
+   font-family: Georgia, serif;
+   color: #5C5B5B;
+}
+
+a
+{
+   text-decoration: underline;
+   color: #0F8C8C;
+}
+
+a:hover
+{
+   text-decoration: none;
+}
+
+br.clearfix
+{
+    clear: both;
+}
+
+h1,h2,h3,h4
+{
+   font-weight: normal;
+   letter-spacing: -1px;
+}
+
+h2
+{
+   font-size: 2.25em;
+}
+
+h2,h3,h4
+{
+   color: #2C2B2B;
+   margin-bottom: 1em;
+}
+
+h3
+{
+   font-size: 1.75em;
+}
+
+h4
+{
+   font-size: 1.5em;
+}
+
+p
+{
+   margin-bottom: 0.9em;
+}
+/***********************************************************/
+/************************** Wrapper ****************************/
+#wrapper
+{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+}
+/***************************************************************/
+/********************* Header ********************/
+#header
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100px;
+   width: 100%;
+   background-color: #6E6E6E;
+   background-image: url(images/img03.jpg);
+   background-position: top left;
+   background-repeat: no-repeat;
+   color: #FFFFFF;
+   border: solid 1px #7E7E7E;
+   border-radius: 5px 0 5px 0;
+}
+#header_left
+{
+   position: absolute;
+   width: 500px;
+   margin: 0;
+   left: 150px;
+   top: 15px;
+}
+
+#header_left a
+{
+   text-decoration: none;
+   color: #FFFFFF;
+   text-shadow: 0 1px 1px #3E3E3E;
+}
+
+#header_left h1
+{
+   font-size: 3.6em;
+}
+#header_right
+{
+   left: 800px;
+   top: 25px;
+   position: absolute;
+   width: 425px;                
+   line-height: 20px;
+}
+#header_right h2
+{ 
+   color: #BEBEBE;
+   font-style: italic;
+   font-size: 1.29em;
+   text-shadow: 0 1px 1px #3E3E3E;
+}
+/*************************************************/
+/********************* Menu *********************/
+#menu1
+{
+   position: fixed;
+   top: 100px;
+   height: 100%;
+   width: 5px;
+   margin: 0 770px;
+   list-style: none;
+   background-color: rgb(128, 76, 25);
+   <!--background-image: url(../images/img04.gif);-->
+}
+
+
+/* Menu General Styles */
+#menu {
+     position: absolute;
+	background-color: #6E6E6E;
+     background-color: rgb(128, 76, 25);
+     top: 100px; 
+     padding-left: 800px;
+     height: 50px; 
+     width: 100%;
+     font-size: 1.5em;
+     letter-spacing: -1.0px;
+     text-shadow: 0 1px 1px #3E3E3E;
+     text-decoration: none;
+     display: block;
+}
+#nav a {
+	color: #FFFFFF;
+     
+}
+#nav,
+#nav ul {
+	list-style: none;
+	margin: 0;
+	
+}
+#nav li {
+	position: relative;
+     
+}
+#nav a {
+	padding: 10px 20px;
+	display: block;
+	text-decoration: none;
+}
+#nav a:hover {
+	background: #000;
+}
+
+
+/* Level 1 Drop Down Menu */
+#nav > li {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: -4px; /* solve the 4 pixels spacing between list-items */
+}
+#nav > li:first-child {
+	margin-left: 0;
+}
+#nav > li > a {}
+#nav > li > a:hover {}
+
+/* Level 2 */
+#nav > li > ul {
+	text-align: left;
+	width: auto; /* change auto value with 200px if you want a bigger menu */
+	display: none;
+	background: #5DBB04;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 9999999; /* if you have YouTube iframes, is good to have a bigger z-index so the video can appear above the video */
+}
+#nav > li:hover > ul {
+	display: block;
+}
+#nav ul li a {}
+#nav ul li a:hover {}
+
+/* Level 3 */
+#nav > li > ul > li > ul {
+	text-align: left;
+	display: none;
+	background: #E7B400;
+	position: absolute;
+	left: 100%;
+	top: 0;
+	z-index: 9999999;
+}
+#nav > li > ul > li:hover > ul {
+	display: block;
+}
+#nav ul ul li {}
+#nav ul ul li a {}
+#nav ul ul li a:hover {}
+
+
+  
+/*************************************************/
+/**************General********************/
+br.clearfix
+{
+   clear: both;
+}
+/*****************************************/
+/******************** Page **********************/
+#page
+{
+  width: 800px;
+  margin: 0 800px;
+  overflow: auto;
+  padding-top: 130px;
+}
+
+#page1
+{
+  width: 700px;
+  margin: 0 50px;
+  overflow: auto;
+  padding-top: 150px;
+}
+
+
+#page h3
+{
+   font-size: 2.0em;
+}
+/*********************************************/
+#content_home
+{
+  display: block;
+  padding: 0;
+}
+
+#content_home box
+{
+  float: left;
+  overflow: visible;
+}
+
+#content_home h2
+{
+  font-size: 3.0em;
+}
+
+#content_home p.homeText
+{
+  line-height: 180%; 
+  font-size: 10pt;
+}
+
+#content_home img
+{
+   margin-right: 2.4em;
+   float: left;
+   border: solid 1px black;
+}
+/*************************************************/
+#content_research
+{
+  display: block;
+  padding-top: 5px;
+}
+
+#content_research box
+{ 
+  width: 780px;
+  float: left;
+  overflow: visible;
+}
+
+#content_research a.scroller
+{
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+}
+
+#content_research h4
+{
+   margin-top: 20px;
+   font-size: 1.3em;
+   color: #0F8C8C;
+   border-top: solid 1px #D4D4D4;
+   border-bottom: solid 1px #D4D4D4;
+   padding: 2px 0 2px 0;
+}
+#content_research img
+{
+   float:left;
+   border: solid 1px black; 
+   margin-top: 0;
+   margin-bottom: 1.1em; 
+}
+
+#content_research img.strongModel
+{
+   margin-left:9em;
+}
+
+#content_research img.model_free
+{
+   margin-left:2.0em;
+}
+
+#content_research img.multi_camera
+{
+   margin-left:6.5em;
+}
+
+#content_research img.large_scale
+{
+   margin-left:4em;
+}
+
+#content_research p.researchContent
+{
+  line-height: 180%; 
+  font-size: 10pt;
+}
+/*************************************************/
+#content_publication
+{
+  padding-top: 5px;
+  line-height: 1.5em;
+}
+
+#content_publication box
+{ 
+  width: 780px;
+  float: left;
+  overflow: visible;
+}
+
+#content_publication b.heading
+{ 
+  font-size: 11pt;
+}
+
+#content_publication a.scroller
+{
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+}
+#content_publication ul.journal
+{
+   list-style-type: square;
+}
+
+#content_publication ul.conference
+{
+   list-style-type: disc;
+}
+
+#content_publication ul.techReport
+{
+   list-style-type: circle;
+}
+
+#content_publication ul li
+{
+   font-size: 10pt;
+   line-height: 150%;
+   margin-top: 10px;
+   margin-bottom: 20px;
+   padding-left: 5px;   
+}
+/**************************************************/
+#content_resume
+{
+  display: block;
+  padding-top: 5px;
+  /*font-size: 12pt;*/
+}
+
+#content_recume box
+{
+  float: left;
+  width: 700px;
+  overflow: visible;
+}
+
+#content_resume a.scroller
+{
+  display: block;
+  height: 120px;
+  margin-top: -120px;
+  visibility: hidden;
+}
+
+#content_resume p
+{
+  line-height: 150%; 
+  font-size: 10pt;
+}
+#content_resume b
+{ 
+  font-size: 11.5pt;
+}
+#content_resume .content
+{
+  line-height: 150%; 
+  font-size: 10pt;
+  margin-left: 50px;
+  padding-bottom: 10px;
+}
+
+#content_resume ul.additional_info
+{
+  margin-top: 0;
+  list-style-type: none;
+  margin-left: 35px;
+}
+
+#content_resume ul.additional_info li
+{
+  font-size: 10pt;
+}
+
+#content_resume ul.additional_info li:before
+{
+  content: "-- \0020";
+}
+
+#content_resume ul.additional_info li
+{
+  padding-bottom: 5px;
+}
+
+#content_resume ul.additional_info li.last
+{
+  padding-bottom: 0;
+}
+
+span.aI
+{
+  font-size: 10pt;
+}
+
+span.sp
+{
+  color: black; 
+}
+
+#content_resume li.content_1
+{
+  margin-left: 25px;
+  font-size: 10.8pt;
+}
+
+span.second_line
+{
+  display: block;
+  font-size: 10.5pt;
+  font-style: italic;
+  padding-left: 0px;
+}
+/*******************************************************/
+#content_current_activities
+{
+  margin-left: 25px;
+  margin-right: 25px;
+
+  font-size: 10.8pt;
+}
+/*******************************************************/
+
+#content_about
+{
+  display: block;
+  padding-top: 5px;
+}
+#content_about box
+{
+  float: left;
+  width: 700px;
+  overflow: visible;
+}
+#content_about b
+{ 
+  font-size: 11.5pt;
+}
+
+#content_about a.scroller
+{
+  display: block;
+  height: 120px;
+  margin-top: -120px;
+  visibility: hidden;
+}
+#content_about p.content
+{
+  margin-left: 30px;
+  margin-top: 5px;
+  line-height: 150%; 
+  font-size: 10pt;
+}
+
+#content_about ul
+{
+  margin-left: 30px;
+  margin-top: 5px;
+  line-height: 150%; 
+  font-size: 10pt;
+}
+
+/******************************************************/
+#content_contact
+{
+  display: block;
+  padding-top: 5px;
+}
+#content_contact box
+{
+  float: left;
+  width: 700px;
+  overflow: visible;
+}
+
+#content_contact p
+{
+  font-size: 10pt;
+}
+
+#content_contact tt
+{
+  font-size: 12pt;
+}
+
+#content_contact a.scroller
+{
+   display: block;
+   height: 120px;
+   margin-top: -120px;
+   visibility: hidden;
+}
+#content_contact tt
+{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#content_contact tt.last
+{
+    margin-left: 10px;
+    margin-right: 0;
+}
+/*******************************************************/
+/****************Footer*************************/
+#footer-wrap
+{
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+#footer-container 
+{
+  height: 55px;
+  background: url(images/img03.jpg) repeat-x left bottom;
+}
+
+#footer
+{
+  width: 940px;
+  margin-left: 95px;
+  position: relative;
+  font-size: 8.5pt;
+}
+
+#footer img.leftInd
+{
+  float: left;
+  padding-top: 7px;
+  padding-left: 40px;
+}
+
+#footer script.leftInd
+{
+  float: left;
+  padding-top: 5px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+#footer img.centerInd
+{
+  float: left;
+  padding-top: 7px;
+  padding-left: 320px;
+}
+
+#footer img.rightInd
+{
+  float: right;
+  padding-top: 7px;
+  padding-left: 0;
+}
+
+#footer span.footerText
+{
+  float: left;
+  margin-left: 92px;
+  overflow: visible;
+  color: white;
+}
+
+#footer a.footerText
+{
+  text-decoration: underline;
+  color: #D0D0D0;
+}
